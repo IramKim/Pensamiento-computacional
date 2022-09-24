@@ -5,6 +5,13 @@ def calc_1rm(ing_peso,ing_rep):
     return rm_1
 
 #coeficientes y formulas
+
+def valid():
+    while ing_rm <= 12:
+        return (calc_rm(ing_rm))
+    else:
+        return ("Introduce un numero valido")
+        
 def calc_rm(ing_rm):
     if ing_rm == 1:
         return("tu 1RM es: %.1f"%calc_1rm(ing_peso,ing_rep))
@@ -51,10 +58,7 @@ def calc_rm(ing_rm):
 
     elif ing_rm == 12:
         rm = calc_1rm(ing_peso,ing_rep) * 0.53
-        return("tu 12RM es: %.1f"%rm)
-
-    else:
-        return("Introduce un número valido")
+        return("tu 12RM es: %.1f"%rm)    
 
 #datos pedidos
 
@@ -67,8 +71,8 @@ ing_rm = int(input("Que RM quisieras saber? 1-12: "))
 #mostrar resultado
 
 pausa = input("presiona ENTER para mostrar resultados")
-print(calc_rm(ing_rm))
 
+print(valid())
 
 
 
@@ -79,6 +83,7 @@ print(calc_rm(ing_rm))
 
 
     
+
 
 
 
