@@ -11,54 +11,30 @@ def valid():
         return (calc_rm(ing_rm))
     else:
         return ("Introduce un numero valido")
-        
+    
+def coeficiente(ing_rm):
+    cont = 1
+    acum = 1
+    while cont <= ing_rm:
+        acum = acum - 0.05
+        cont = cont + 1
+        return acum  
+      
 def calc_rm(ing_rm):
-    if ing_rm == 1:
-        return("tu 1RM es: %.1f"%calc_1rm(ing_peso,ing_rep))
+    for i in range(0,13):
+        if i == ing_rm:
+            rm = ((calc_1rm(ing_peso,ing_rep)) * (coeficiente(ing_rm)))
+            return("tu", ing_rm, "RM es: %.1f"%rm)
     
-    elif ing_rm == 2:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.95
-        return("tu 2RM es: %.1f"%rm)
-    
-    elif ing_rm == 3:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.90
-        return("tu 3RM es: %.1f"%rm)
-    
-    elif ing_rm == 4:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.86
-        return("tu 4RM es: %.1f"%rm)
+def lista(ing_rep,ing_rm,ing_peso):
+    lista = [0,0,0]
+    for x in lista:
+        lista[0] = ing_rep
+        lista[1] = ing_rm
+        lista[2] = ing_peso
+        return ("datos ingresados:",lista)
 
-    elif ing_rm == 5:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.82
-        return("tu 5RM es: %.1f"%rm)
-    
-    elif ing_rm == 6:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.78
-        return("tu 6RM es: %.1f"%rm)
-    
-    elif ing_rm == 7:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.74
-        return("tu 7RM es: %.1f"%rm)
-    
-    elif ing_rm == 8:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.70
-        return("tu 8RM es: %.1f"%rm)
-    
-    elif ing_rm == 9:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.65
-        return("tu 9RM es: %.1f"%rm )
-    
-    elif ing_rm == 10:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.61
-        return("tu 10RM es: %.1f"%rm)
-    
-    elif ing_rm == 11:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.57
-        return("tu 11RM es: %.1f"%rm)
 
-    elif ing_rm == 12:
-        rm = calc_1rm(ing_peso,ing_rep) * 0.53
-        return("tu 12RM es: %.1f"%rm)    
 
 #datos pedidos
 
@@ -68,6 +44,7 @@ ing_rep = int(input("A cuantas repeticiones?: "))
 
 ing_rm = int(input("Que RM quisieras saber? 1-12: "))
 
+
 #mostrar resultado
 
 pausa = input("presiona ENTER para mostrar resultados")
@@ -75,7 +52,7 @@ pausa = input("presiona ENTER para mostrar resultados")
 print(valid())
 
 
-
+print(lista(ing_peso,ing_rep,ing_rm))
 
 
 
@@ -83,6 +60,7 @@ print(valid())
 
 
     
+
 
 
 
