@@ -1,0 +1,25 @@
+Sub-Competencia:
+	componente: aplica estructuras condicionales para resolver un problema
+
+Error original: habia incluido estructuras ciclicas con formas de condicionales y no demostraban una funcionalidad en el programa
+
+Cambio realizado: Añadi nuevas funciones utilizando for´s y while´s:
+
+	def coeficiente(ing_rm):
+    """
+    recibe el ing_rm deseado y calcula el coeficiente por
+    el cual se multiplicara el 1rm, 100%(1RM) = 1. Y retorna
+    el coeficiente(acum)
+    """
+    cont = 1
+    acum = 1.05
+    while cont <= ing_rm:
+        acum = acum - 0.05
+        cont = cont + 1
+    return acum
+
+Lineas de código donde se ve la correción: 28 a 31
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Igualmente añadi descripciones de cada una de las funciones con """         """, y para seccionar cada parte del programa utilize #.
