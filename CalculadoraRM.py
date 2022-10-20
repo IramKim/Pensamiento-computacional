@@ -1,9 +1,9 @@
 #formula de Gorostiaga para 1RM
-    """
-    recibe el peso y las repeticiones trabajadas y
-    utilizando una formula particulas, calcula el 1RM.
-    Y retorna el 1RM
-    """
+"""
+recibe el peso y las repeticiones trabajadas y
+utilizando una formula particulas, calcula el 1RM.
+Y retorna el 1RM
+"""
 
 def calc_1rm(ing_peso,ing_rep):
     rm_1 = ing_peso / (1.0278-(0.0278*ing_rep))
@@ -12,7 +12,7 @@ def calc_1rm(ing_peso,ing_rep):
 #coeficientes y formulas para calcúlos
 
 def valid():
-     """
+    """
     no recibe ningun parametro, solo da el paso para
     validar si el programa puede calcular lo deseado
     """
@@ -138,6 +138,10 @@ else:
 
     Ej = no es coherente que el 12 RM de 60kg a 12 repeticiones sea menor que 60kg.""","\n")
 
+    pausa = input("Presiona ENTER para desplegar tabla de equivalencias")
+    
+    print("")
+    
     tabla_de_equivalencias()
 
 
